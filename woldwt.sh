@@ -11,11 +11,11 @@ echo   " "
 ping localhost -c 4 >>nul
 echo "Actualizando APT e Instalando WakeOnLan..."
 echo " "
-#sudo apt update
+sudo apt update
 echo " "
 ping localhost -c 4 >>nul
 clear
-#sudo apt install -y wakeonlan
+sudo apt install -y wakeonlan
 clear
 echo " "
 echo "Para generar el AuroScript, primero tenes que saber"

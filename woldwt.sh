@@ -66,6 +66,15 @@ echo " "
 echo "#!/bin/bash">>wol.sh
 echo "# DiwaIT Wake On Lan AutoScript">>wol.sh
 echo "wakeonlan -i $laip -p $elpuerto $lamac">>wol.sh
+echo "wakeonlan -i $laip -p $elpuerto $lamac">>wol.sh
+echo "wakeonlan -i $laip -p $elpuerto $lamac">>wol.sh
+echo "wakeonlan -i $laip -p $elpuerto $lamac">>wol.sh
+echo "wakeonlan -i $laip -p $elpuerto $lamac">>wol.sh
+echo "wakeonlan -i $laip -p $elpuerto $lamac">>wol.sh
+echo "wakeonlan -i $laip -p $elpuerto $lamac">>wol.sh
+echo "wakeonlan -i $laip -p $elpuerto $lamac">>wol.sh
+echo "wakeonlan -i $laip -p $elpuerto $lamac">>wol.sh
+echo "wakeonlan -i $laip -p $elpuerto $lamac">>wol.sh
 echo "exit 0">>wol.sh
 sudo chmod 777 wol.sh >nul
 ping localhost -c 4 >>nul

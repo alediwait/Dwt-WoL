@@ -49,7 +49,7 @@ clear
 echo "El puerto es: $elpuerto "
 ping localhost -c 4 >>nul
 echo " "
-echo -e "Escribi la MAC usando separador de : y apreta enter: "
+echo -e "Escribi la MAC: "
 read -a lamac
 ping localhost -c 4 >>nul
 clear
@@ -81,7 +81,7 @@ ping localhost -c 4 >>nul
 clear
 echo " ARCHIVO wol.sh CREADO CON EXITO!! "
 echo " "
-echo "Se mostrara en pantalla el mismo durante 4 segundos y luego el programa finalizara"
+echo "Se mostrara en pantalla el mismo durante 4 segundos y luego crearemos la tarea programada..."
 echo " "
 ping localhost -c 4 >>nul
 clear
@@ -89,8 +89,46 @@ echo " "
 echo "    WOL.SH   "
 echo " "
 cat wol.sh
+ping localhost -c 6 >>nul
+clear
+echo "Listo, ahora la tarea programada..."
+ping localhost -c 6 >>nul
+clear
+echo " "
+echo "Vamos a generar la tarea programada"
+echo " "
+echo " "
+echo " "
+echo " "
+echo " "
+echo "Generando opciones... espere..."
 ping localhost -c 4 >>nul
 clear
-rm nul
-echo "Listo"
+echo -e "A que hora (sin minutos) vamos a ejecutar la tarea:  "
+read -a lahora
+echo " "
+echo "La hora ingresada es: $lahora"
+ping localhost -c 4 >>nul
+clear
+echo -e "Escribi el path donde estas trabajando sin la / final:  "
+read -a camino
+echo " "
+echo "El Path ingresado es: $camino"
+ping localhost -c 4 >>nul
+clear
+touch 111temp
+echo "00 $lahora * * * $camino/./wol.sh">>111temp
+sudo rm /var/spool/cron/crontabs/root
+sudo cp 111temp /var/spool/cron/crontabs/root
+echo "Asi quedo el crontab:"
+echo " "
+sudo cat /var/spool/cron/crontabs/root
+echo " "
+ping localhost -c 4 >>nul
+clear
+echo " "
+echo " Sistema Listo para WOL!"
+ping localhost -c 4 >>nul
+sudo rm nul
+sudo rm 111temp
 exit 0

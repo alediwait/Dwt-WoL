@@ -1,8 +1,8 @@
 # Dwt-WoL
 Wake On Lan AutoScript Generator
-El objetivo de este Script es, mediante 4 preguntas al usuario, generar una tarea programada que envie un paquete magico a una o varias PC, permitiendo despertarlas.
+El objetivo de este Script es, mediante 4 preguntas al usuario, generar una tarea programada que envie 10 paquetes magicos a una o varias PC, permitiendo despertarlas.
 
-Version 1.0a
+Version 1.0a (por ahora 1 sola MAC)
 
 *Uso de wakeonlan pkg previo apt-get update (sudo)
 *Lectura de variables con read -p

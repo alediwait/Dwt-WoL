@@ -49,11 +49,11 @@ clear
 echo "El puerto es: $elpuerto "
 ping localhost -c 2 >>nul
 echo " "
-echo -e "Escribi la MAC: "
+echo -e "Escribi la MAC usando separador de : y apreta enter: "
 read -a lamac
 ping localhost -c 2 >>nul
 clear
-echo "La ip escrita es: $lamac "
+echo "La MAC escrita es: $lamac "
 ping localhost -c 2 >>nul
 clear
 echo " La config quedo asi: "
